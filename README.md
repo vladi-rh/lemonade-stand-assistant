@@ -20,7 +20,7 @@ To ensure safe and appropriate interactions, the system employs multiple AI guar
 - **Language Detector**: Ensures responses are in acceptable languages (English and Turkish)
 
 Furthemore, there is a:
-- **Regex Detector**; Blocks specific text without the use of models. In our case, its other fruits we consider "competitors".
+- **Regex Detector**: Blocks specific text without the use of models. In our case, its other fruits we consider "competitors".
 
 The guardrails orchestrator coordinates these detectors to evaluate inputs and outputs before presenting responses to users.
 
