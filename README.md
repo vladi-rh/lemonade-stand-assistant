@@ -2,7 +2,7 @@
 
 ## Acknowledgement
 
-This quickstart is based on the demo by Trusty AI team. It can be found [here](https://github.com/trustyai-explainability/trustyai-llm-demo/tree/lemonade-stand).
+This quickstart is based on the demo by Trusty AI team. It can be found [here](https://github.com/trustyai-explainability/trustyai-llm-demo/tree/lemonade-stand). If you like this demo, we encourage people to contribute to the community of TrustyAI.
 
 ## Overview
 
@@ -18,6 +18,9 @@ To ensure safe and appropriate interactions, the system employs multiple AI guar
 - **IBM HAP Detector (Granite Guardian)**: Monitors conversations for hate, abuse, and profanity
 - **Prompt Injection Detector (DeBERTa v3)**: Identifies and blocks attempts to manipulate the AI assistant
 - **Language Detector (XLM-RoBERTa)**: Ensures responses are in English only
+
+Furthemore, there is a:
+- **Regex Detector**: Blocks specific text without the use of models. In our case, its other fruits we consider "competitors".
 
 The guardrails orchestrator coordinates these detectors to evaluate inputs and outputs before presenting responses to users.
 
