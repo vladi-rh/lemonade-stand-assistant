@@ -17,7 +17,9 @@ This demo showcases how to deploy an AI-powered customer service assistant with 
 3. Triggering of specific detectors are monitored and visualized. (Alerts are out of scope but could be done)
 
 
-**TO ADD** : architecture slide TBA
+**Schema slide**
+<img width="1084" height="655" alt="schema" src="https://github.com/user-attachments/assets/85bb3f0f-718f-4186-a373-25580f96067f" />
+
 
 ## Detailed description
 
