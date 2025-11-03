@@ -10,6 +10,17 @@ Imagine we run a successful lemonade stand and want to deploy a customer service
 
 This demo showcases how to deploy an AI-powered customer service assistant with multiple guardrails to ensure safe, compliant, and on-brand interactions. The solution uses Llama 3.2 as the base language model, protected by three detector models that monitor for harmful content, prompt injection attacks, and language compliance.
 
+**In this demo, we are following these assumptions of principles:** 
+
+1. The LLM is untrusted. All its output must be validated. 
+2. The user is untrusted. All the input must be validated.
+3. Triggering of specific detectors are monitored and visualized. (Alerts are out of scope but could be done)
+
+
+**Schema slide**
+<img width="1084" height="655" alt="schema" src="https://github.com/user-attachments/assets/85bb3f0f-718f-4186-a373-25580f96067f" />
+
+
 ## Detailed description
 
 The Lemonade Stand Assistant provides an interactive customer service experience for a fictional lemonade stand business. Customers can ask questions about products, ingredients, pricing, and more through a conversational interface.
