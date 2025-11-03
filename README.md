@@ -165,16 +165,6 @@ To remove the deployment:
 helm uninstall lemonade-stand-assistant --namespace ${PROJECT}
 ```
 
-## References 
-
-<!-- 
-
-*Section optional.* Remember to remove if do not use.
-
-Include links to supporting information, documentation, or learning materials.
-
---> 
-
 ## Technical details
 
 ### Architecture
@@ -199,6 +189,8 @@ The Lemonade Stand Assistant consists of the following components:
 | HAP Detection | Granite Guardian HAP | 125M parameters | Content safety |
 | Prompt Injection Guard | DeBERTa v3 Base | ~184M parameters | Security |
 | Language Detection | XLM-RoBERTa Base | ~270M parameters | Language validation |
+
+![architecture.png](./docs/images/architecture.png)
 
 ### Deployment Configuration
 
