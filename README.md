@@ -17,9 +17,7 @@ This demo showcases how to deploy an AI-powered customer service assistant with 
 3. Triggering of specific detectors are monitored and visualized. (Alerts are out of scope but could be done)
 
 
-**Schema slide**
-<img width="1084" height="655" alt="schema" src="https://github.com/user-attachments/assets/85bb3f0f-718f-4186-a373-25580f96067f" />
-
+![architecture.png](./docs/images/architecture.png)
 
 ## Detailed description
 
@@ -37,7 +35,7 @@ The guardrails orchestrator coordinates these detectors to evaluate inputs and o
 
 ### See it in action
 
-TODO: an arcade will be added
+[![Watch the interactive demo](docs/arcade-demo.gif)](https://demo.arcade.software/X3orbmpyKdY295116jnY)
 
 #### Monitoring Dashboard
 
@@ -92,7 +90,7 @@ Before deploying, ensure you have:
 - Access to a Red Hat OpenShift cluster with OpenShift AI installed
 - `oc` CLI tool installed and configured
 - `helm` CLI tool installed
-- Sufficient GPU resources available in your cluster
+- Sufficient resources available in your cluster
 
 ### Installation
 
@@ -189,8 +187,6 @@ The Lemonade Stand Assistant consists of the following components:
 | HAP Detection | Granite Guardian HAP | 125M parameters | Content safety |
 | Prompt Injection Guard | DeBERTa v3 Base | ~184M parameters | Security |
 | Language Detection | XLM-RoBERTa Base | ~270M parameters | Language validation |
-
-![architecture.png](./docs/images/architecture.png)
 
 ### Deployment Configuration
 

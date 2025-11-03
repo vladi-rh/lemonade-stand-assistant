@@ -98,7 +98,7 @@ ui <- page_fillable(
     style = "background-color:#EE0000; color:white; padding:10px; font-size:20px; font-weight:bold;",
     "💬 Welcome to digital lemonade stand!"
   ),
-  chat_ui(id = "chat", messages = "*Hello!* Let's speak about lemons."),
+  chat_ui(id = "chat", messages = "Hello! Let's speak about lemons."),
   fillable_mobile = TRUE,
   tags$footer(
     style = "text-align:center; padding:10px; font-size:12px; color:#4C4C4C;",
