@@ -47,10 +47,7 @@ metadata:
   annotations:
     helm.sh/weight: "1"
     openshift.io/display-name: prompt-injection-detector
-    serving.knative.openshift.io/enablePassthrough: 'true'
     serving.kserve.io/deploymentMode: RawDeployment
-    sidecar.istio.io/inject: 'true'
-    sidecar.istio.io/rewriteAppHTTPProbers: 'true'
   name: prompt-injection-detector
   labels:
     opendatahub.io/dashboard: 'true'

@@ -102,7 +102,7 @@ ui <- page_fillable(
   fillable_mobile = TRUE,
   tags$footer(
     style = "text-align:center; padding:10px; font-size:12px; color:#4C4C4C;",
-    "Powered by Red Hat | vLLM Runtime on OpenShift"
+    "Powered by Red Hat OpenShift AI"
   )
 )
 # Global metrics storage (shared across sessions)
