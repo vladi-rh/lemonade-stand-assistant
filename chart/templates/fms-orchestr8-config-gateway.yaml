@@ -88,7 +88,7 @@ data:
           - hap
           - prompt_injection
           - language_detection
-        fallback_message: "I'm sorry I can't be with you. Is there anything else I can help you with?"
+        fallback_message: "I'm sorry I can't help with that. Is there anything else I can help you with?"
       - name: hap
         detectors:
           - hap
