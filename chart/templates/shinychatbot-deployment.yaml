@@ -9,7 +9,7 @@ metadata:
     app: lemonade-stand-assistant
     app.openshift.io/runtime: shiny
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: lemonade-stand-assistant
@@ -29,6 +29,13 @@ spec:
               value: fakekey
             - name: VLLM_MODEL
               value: llama32
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
           volumeMounts:
             - mountPath: /system-prompt
               name: system-prompt
@@ -41,6 +48,7 @@ spec:
               path: prompt
             name: system-prompt
           name: system-prompt
+
 ---
 kind: Service
 apiVersion: v1
@@ -75,3 +83,42 @@ spec:
   tls:
     termination: edge
   wildcardPolicy: None
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: lemonade-stand-assistant
+  namespace: lemonade-stand-assistant
+  labels:
+    component: frontend
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: lemonade-stand-assistant
+  minReplicas: 3
+  maxReplicas: 40
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 80
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      selectPolicy: Max
+      policies:
+        - type: Pods
+          value: 4
+          periodSeconds: 15
+        - type: Percent
+          value: 100
+          periodSeconds: 15
+    scaleDown:
+      selectPolicy: Max
+      policies:
+        - type: Percent
+          value: 100
+          periodSeconds: 15
