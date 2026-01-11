@@ -39,4 +39,4 @@ data:
           hostname: language-detector-predictor
           port: 8000
         chunker_id: whole_doc_chunker
-        default_threshold: 0.5
+        default_threshold: 0.75
